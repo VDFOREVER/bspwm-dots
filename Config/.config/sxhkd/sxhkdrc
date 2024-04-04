@@ -1,0 +1,25 @@
+super + y
+    alacritty
+
+super + e
+        nemo
+
+super + r
+        rofi -show drun -show-icons
+
+#ВЫЙТИ/ПЕРЕЗАГРУЗИТЬ BSPWM
+super + shift + {q,r}
+        bspc {quit,wm -r}
+
+#ПОМЕНЯТЬ СТАТУС ОКНА НА /ТАЙЛОВОЕ/ПСЕВДО ТАЙЛОВОЕ/ПЛАВАЮЩЕЕ/ПОЛНОЭКРАННОЕ
+super + v
+    bspc node -t "~"{floating,tiled}
+
+super + h
+    bspc node -t "~"{fullscreen,tiled}
+
+Print
+    flameshot gui
+
+super + {_,shift + }c
+        bspc node -{c,k}
