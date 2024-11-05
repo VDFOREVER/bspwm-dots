@@ -1,3 +1,8 @@
+colors:
+   primary:
+    background: "#20242c"
+    foreground: "#d8dee9"
+
 font:
   size: 10.0
   bold:
