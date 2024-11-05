@@ -7,19 +7,20 @@ super + e
 super + r
         rofi -show drun -show-icons
 
-#ВЫЙТИ/ПЕРЕЗАГРУЗИТЬ BSPWM
 super + shift + {q,r}
         bspc {quit,wm -r}
 
-#ПОМЕНЯТЬ СТАТУС ОКНА НА /ТАЙЛОВОЕ/ПСЕВДО ТАЙЛОВОЕ/ПЛАВАЮЩЕЕ/ПОЛНОЭКРАННОЕ
-super + v
-    bspc node -t "~"{floating,tiled}
-
-super + h
-    bspc node -t "~"{fullscreen,tiled}
+super + {t,v,f}
+	bspc node -t {tiled,floating,fullscreen}
 
 Print
     flameshot gui
 
-super + {_,shift + }c
-        bspc node -{c,k}
+super + c
+        bspc node -c
+
+super + {1-9}
+	bspc desktop -f '^{1-9}'
+
+super + k
+	{xkill}
